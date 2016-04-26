@@ -1,6 +1,8 @@
+$(document).ready(function(){
 var e = document.getElementsByTagName('BODY');
 var paragraphs = document.getElementsByTagName('P');
 var ok =false;
+var keyword=[]
 
 for(paragraph in paragraphs)
 {
@@ -17,6 +19,13 @@ if(paragraph.search(keyword)!=-1)
 }
  if(ok!=true)
  {
-e.append("<h1> Do you want to be on this site?</h1>")
+var close = confirm("Do you want to view this page?")
+if(close==true)
+{
+
+  //close the page
+}
 
  }
+}
+)
