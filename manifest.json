@@ -1,13 +1,13 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 1,
   "name": "Procrastiantion",
   "version": "0.1",
   "description": "Procrastination extension",
 
   "browser_action": {
     "default_title": "Procrastination",
-    "default_popup": "procrastination.html",
-    "default_icon": "",
+    "default_popup": "popup.html",
+    "default_icon": "exclamation-mark-red-hi.png",
   },
   "content_scripts": [
       {

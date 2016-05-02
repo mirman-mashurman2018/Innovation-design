@@ -1,7 +1,8 @@
 $(document).ready(function(){
-var e = document.getElementsByTagName('BODY');
+var e = document.getElementsByTagName('BODY')[0];
 var paragraphs = document.getElementsByTagName('P');
 var ok =false;
+//add some firebase thing with the keywords
 var keyword=[]
 
 for(paragraph in paragraphs)
@@ -19,7 +20,7 @@ if(paragraph.search(keyword)!=-1)
 }
  if(ok!=true)
  {
-var close = confirm("Do you want to view this page?")
+var close = confirm("Do you want to view this page?");
 if(close==true)
 {
 
