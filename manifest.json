@@ -1,20 +1,24 @@
 {
-  "manifest_version": 1,
-  "name": "Procrastiantion",
+  "manifest_version": 2,
+  "name": "SWAGProcrastiantionNAME",
   "version": "0.1",
   "description": "Procrastination extension",
 
-  "browser_action": {
+  "browser_action":
+  {
     "default_title": "Procrastination",
     "default_popup": "popup.html",
-    "default_icon": "exclamation-mark-red-hi.png",
-  },
+    "default_icon": "exclamation-mark-red-hi.png"
+  }
+  ,
   "content_scripts": [
       {
         "css": ["contentscripts.css"],
-        "js": ["jquery.js", "contentscripts.js"]
+        "js": ["contentscripts.css","contentscripts.js"],
+        "matches": ["http://*/*", "https://*/*"]
+
       }
     ],
-  "content_security_policy": "script-src 'self' https://changethisout.firebaseio.com https://*.firebaseio.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://antiprocrastination.firebaseio.com https://*.firebaseio.com; object-src 'self'",
   "permissions": ["identity", "identity.email", "storage"]
 }

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 var e = document.getElementsByTagName('BODY')[0];
 var paragraphs = document.getElementsByTagName('P');
-var ok =false;
+var ok=false;
 //add some firebase thing with the keywords
 var keyword=[]
 
