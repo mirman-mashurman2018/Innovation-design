@@ -14,7 +14,7 @@
   "content_scripts": [
       {
         "css": ["contentscripts.css"],
-        "js": ["contentscripts.css","contentscripts.js"],
+        "js": ["node_modules/jquery/dist/jquery.js","contentscripts.js"],
         "matches": ["http://*/*", "https://*/*"]
 
       }

@@ -1,9 +1,9 @@
-$(document).ready(function(){
+$( document ).ready(function(){
 var e = document.getElementsByTagName('BODY')[0];
 var paragraphs = document.getElementsByTagName('P');
 var ok=false;
 //add some firebase thing with the keywords
-var keyword=[]
+var keywords=["Bleh"];
 
 for(paragraph in paragraphs)
 {
@@ -20,6 +20,7 @@ if(paragraph.search(keyword)!=-1)
 }
  if(ok!=true)
  {
+   console.log("bad");
 var close = confirm("Do you want to view this page?");
 if(close==true)
 {
@@ -29,4 +30,4 @@ if(close==true)
 
  }
 }
-)
+);
