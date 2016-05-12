@@ -18,18 +18,18 @@ var convert = (function() {
 
 
 $( document ).ready(function(){
-var e = document.getElementsByTagName('BODY')[0];
-var paragraphs = document.getElementsByTagName('P');
+var paragraphs = document.getElementsByTagName("P");
 var ok=false;
 //add some firebase thing with the keywords
 var keywords=["the"];
 
-for(paragraph in paragraphs)
+for(i=0; i<paragraphs.length;i++)
 {
-  console.log(convert(paragraph));
-  for(keyword in keywords)
+  console.log(paragraphs[i].textContent);
+  console.log(paragraphs[i]);
+  for(e=0; e<keywords.length;e++)
   {
-if(convert(paragraph).search(keyword)!=-1)
+if(paragraphs[i].textContent.search(keywords[e])!=-1)
 {
 
   ok=true;
@@ -46,7 +46,7 @@ console.log(ting)
 if(ting!=true)
 {
   console.log("close");
-location.replace("chrome://newtab");
+location.replace("https://drive.google.com/drive/u/0/my-drive");
 }
 
  }
