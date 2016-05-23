@@ -1,4 +1,4 @@
-$( document ).ready(function(){
+$(document).ready(function(){
 var e = document.getElementsByTagName('BODY')[0];
 var paragraphs = document.getElementsByTagName('P');
 var ok=false;
@@ -24,8 +24,7 @@ if(paragraph.search(keyword)!=-1)
 var close = confirm("Do you want to view this page?");
 if(close==true)
 {
-
-  //close the page
+  //close page
 }
 
  }
