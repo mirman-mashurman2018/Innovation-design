@@ -1,15 +1,16 @@
-$(document).ready(function(){
-var e = document.getElementsByTagName('BODY')[0];
-var paragraphs = document.getElementsByTagName('P');
+$( document ).ready(function(){
+var paragraphs = document.getElementsByTagName("P");
 var ok=false;
 //add some firebase thing with the keywords
-var keywords=["Bleh"];
+var keywords=["the"];
 
-for(paragraph in paragraphs)
+for(i=0; i<paragraphs.length;i++)
 {
-  for(keyword in keywords)
+  console.log(paragraphs[i].textContent);
+  console.log(paragraphs[i]);
+  for(e=0; e<keywords.length;e++)
   {
-if(paragraph.search(keyword)!=-1)
+if(paragraphs[i].textContent.search(keywords[e])!=-1)
 {
 
   ok=true;
@@ -21,12 +22,19 @@ if(paragraph.search(keyword)!=-1)
  if(ok!=true)
  {
    console.log("bad");
-var close = confirm("Do you want to view this page?");
-if(close==true)
+var ting = confirm("Are you sure this page is work?");
+console.log(ting)
+if(ting!=true)
 {
-  //close page
+  console.log("close");
+location.replace("https://drive.google.com/drive/u/0/my-drive");
 }
 
+ }
+ else {
+   {
+     console.log("good");
+ }
  }
 }
 );
