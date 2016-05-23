@@ -1,27 +1,8 @@
-var convert = (function() {
-    var convertElement = function(element) {
-        switch(element.tagName) {
-            case "BR":
-                return "\n";
-            case "P": // fall through to DIV
-            case "DIV":
-                return (element.previousSibling ? "\n" : "") + [].map.call(element.childNodes, convertElement).join("");
-            default:
-                return element.textContent;
-        }
-    };
-
-    return function(element) {
-        return [].map.call(element.childNodes, convertElement).join("");
-    };
-})();
-
-
 $( document ).ready(function(){
 var paragraphs = document.getElementsByTagName("P");
 var ok=false;
 //add some firebase thing with the keywords
-var keywords=["the"];
+var keywo rds=["the"];
 
 for(i=0; i<paragraphs.length;i++)
 {

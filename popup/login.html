@@ -1,0 +1,19 @@
+<div id="login" ng-hide="authenticated">
+  <form id="login_form" name="loginForm" ng-submit="login(loginForm)"ng-show="login">
+    <label>Email</label>
+    <input type ="email" name="email" ng-model="user.email"></input>
+    <label>Password</label>
+    <input name="password" minlength="4" type="password" ng-model="user.password"></input>
+    <button type="submit" value="Sign Up">Log In</button>
+    <br>
+  </form>
+  <form id="signup_form" name="signupForm" ng-submit="signup(signupForm)" ng-hide="login">
+    <label>Email</label>
+    <input type ="email" name="email" ng-model="user.email"></input>
+    <label>Password</label>
+    <input name="password" minlength="4" type="password" ng-model="user.password"></input>
+    <label> Confirm</label>
+    <input name="confirm" minlength="4" type="password" ng-model="user.confirm"></input>
+    <button type="submit" value="Sign Up">Sign Up</button>
+  </form>
+</div>
