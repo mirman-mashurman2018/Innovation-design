@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <title>Anti-procrastination</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script scrc="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="firebase.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="angularfire.min.js"></script>
+    <script src="popup/login.js"></script>
+    <script src="popup/app.js"></script>
+    <script src="popup/routes.js">
+    </script>
   </head>
-  <body>
+  <body ng-app="OnTask">
     <legend>
       <center>
         <h1>Anti-procrastination</h1>
@@ -16,31 +22,25 @@
     <h3>An Introduction</h3>
     <p>The anti-procrastination extension aims at providing a "staying on track"
       assistant to students with work-digressing problems.</p><br>
-    <h3>On Task</h3>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="input-group">
-          <div class="input-group-btn">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example<span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">JavaScript</a></li>
-    </ul>
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a subject<span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li><a href="#">English</a></li>
-              <li><a href="#">Math</a></li>
-              <li><a href="#">Science</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Language</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">New subject</a></li>
-            </ul>
-          </div>
-          <input type="text" class="form-control" aria-label="..." placeholder="Enter in new keywords if needed">
-        </div>
-      </div>
+    <h3>On Task Subjects</h3>
+    <div>
+      <form>
+        <input type="radio">Math</input><br>
+        <input type="radio">Science</input><br>
+        <input type="radio">English</input><br>
+        <input type="radio">Language</input><br>
+        <input type="radio">History</input><br>
+        <input type="radio">Other</input>
+        <textarea placeholder="Keywords"></textarea><br>
+        <input type="submit">
+      </form>
     </div>
+    <h3></h3>
+    <div>
+      
+    </form>
   </body>
 </html>
+<style>
+
+</style>

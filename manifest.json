@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "SWAGProcrastiantionNAME",
+  "name": "OnTask",
   "version": "0.1",
   "description": "Procrastination extension",
 
@@ -8,7 +8,7 @@
   {
     "default_title": "Procrastination",
     "default_popup": "popup.html",
-    "default_icon": "exclamation-mark-red-hi.png"
+    "default_icon": "ontask.png"
   }
   ,
   "content_scripts": [
