@@ -9,7 +9,9 @@ angular.module("OnTask")
   function setUserRef(uid){
     $scope.userRef = ref.child("users").child(uid);
     $scope.authenticated = true;
+    $scope.subjects = $firebaseArray($scope.userRef.child("subjects"));
     $scope.keywords = $firebaseArray($scope.userRef.child("keywords"));
+
   }
 $scope.login = function(form) {
   if (form.$valid) {
