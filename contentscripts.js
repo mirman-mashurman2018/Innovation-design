@@ -5,7 +5,6 @@ var gwebsites=["google"]
 var keywords=["the"];
 var badkeywords=["blahblahblahblahblahblah"];
 var loc=window.location.href
-
 for(i=0; i<paragraphs.length;i++)
 {
   console.log(paragraphs[i].textContent);
@@ -21,6 +20,7 @@ if(paragraphs[i].textContent.search(keywords[e])!=-1)
 if(paragraphs[i].textContent.search(badkeywords[e])!=-1)
 {
   ok=false;
+<<<<<<< HEAD
   for(i=0;i<gwebsites.length;i++){
     if(loc.indexOf(gwebsite[i]) > -1){
       ok=true;
@@ -28,6 +28,9 @@ if(paragraphs[i].textContent.search(badkeywords[e])!=-1)
   }
 }
 
+=======
+}
+>>>>>>> fa6830e47dc999c309b9de45e59e7ec588f34373
 }
 
 }

@@ -16,4 +16,8 @@
     <input name="confirm" minlength="4" type="password" ng-model="user.confirm"></input>
     <button type="submit" value="Sign Up">Sign Up</button>
   </form>
+  <div>
+  <button ng-show="login" ng-click="togglelogin()"> Sign Up</button>
+  <button ng-hide="login" ng-click="togglelogin()"> Log in</button>
+</div>
 </div>

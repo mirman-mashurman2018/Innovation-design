@@ -3,21 +3,23 @@
   <head>
     <title>Anti-procrastination</title>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-route/angular-route.min.js"></script>
     <script src="firebase.js"></script>
-    <script src="node_modules/angular/angular.min.js"></script>
     <script src="angularfire.min.js"></script>
-    <script src="popup/login.js"></script>
     <script src="popup/app.js"></script>
-    <script src="popup/ routes.js">
-    </script>
+    <script src="popup/routes.js"></script>
+    <script src="popup/login.js"></script>
+    <script src="popup/home.js"></script>
   </head>
   <body ng-app="OnTask">
       <center>
         <h1>Anti-procrastination</h1>
       </center>
 <!-- ngView:  -->
-<ng-view class="ng-scope">
 
+    <p>The anti-procrastination extension aims at providing students with work-digressing
+      problems</p>
+      <ng-view></ng-view>
   </body>
 </html>
