@@ -3,3 +3,8 @@
 </md-list>
 
 <button ng-click="togglelogin()">Log In</button>
+<div ng-repeat="keyword in keywords track by $index">
+<input type="text" ng-model="keyword.word"></input>
+<button ng-click="deleteKeyword(keyword)">delete</button>
+</div>
+<button ng-click="newKeyword()">New Keyword</button>

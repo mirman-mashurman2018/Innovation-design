@@ -19,6 +19,6 @@
 
       }
     ],
-  "content_security_policy": "script-src 'self' https://antiprocrastination.firebaseio.com https://*.firebaseio.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://console.firebase.google.com/* https://www.gstatic.com/; object-src 'self'",
   "permissions": ["identity", "identity.email", "storage"]
 }

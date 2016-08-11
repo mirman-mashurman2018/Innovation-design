@@ -1,12 +1,12 @@
 angular.module("OnTask")
 .controller("login",function($route,$location,$scope,$firebaseObject,$firebaseArray){
-  var ref = new Firebase("https://antiprocrastination.firebaseio.com");
-  var authData = ref.getAuth();
-  if (authData) {
-    console.log("Authenticated");
-    setUserRef(authData.uid);
-    $location.path("/");
-  }
+
+//  var authData = ref.getAuth();
+//  if (authData) {
+//    console.log("Authenticated");
+//    setUserRef(authData.uid);
+//    $location.path("/");
+//  }
   $scope.login=true;
   function setUserRef(uid){
     $scope.userRef = ref.child("users").child(uid);
@@ -29,27 +29,34 @@ else {
 };
 $scope.login = function(form) {
   if (form.$valid) {
-    ref.authWithPassword({
-      email: $scope.user.email,
-      password: $scope.user.password
-    }, function(error, authData) {
-      if(error) {
-        console.log(error.toString());
-      } else {
-        setUserRef(authData.uid);
-        $scope.$apply();
-      }
-    });
+
+    firebase.auth().signInWithEmailAndPassword($scope.user.email, $scope.user.password).catch(function(error) {
+           // Handle Errors here.
+           var errorCode = error.code;
+           var errorMessage = error.message;
+           // [START_EXCLUDE]
+           if (errorCode === 'auth/wrong-password') {
+             console.log('Wrong password.');
+           } else {
+             console.log(errorMessage);
+           }
   $location.path("/");
+});
 }
 };
 $scope.createUser = function(user) {
-  ref.createUser(user, function(error, userData) {
-  if (error) {
-    console.log("Error creating user:", error);
+  firebase.auth().createUserWithEmailAndPassword(user.email,user.password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // [START_EXCLUDE]
+  if (errorCode == 'auth/weak-password') {
+    console.log('The password is too weak.');
   } else {
-    console.log("Successfully created user account with uid:", userData.uid);
+    console.log(errorMessage);
   }
+  console.log(error);
+  // [END_EXCLUDE]
 });
 };
 
@@ -64,4 +71,5 @@ $scope.signup = function(form) {
     }
   }
 };
-});
+}
+);
