@@ -1,15 +1,16 @@
 angular.module("OnTask")
 .controller("home",function($route,$scope,$firebaseObject,$location,$firebaseArray){
-//  var authData = ref.getAuth();
-//  if (authData) {
-//    console.log("Authenticated");
-//    setUserRef(authData.uid);
-//  }
-  function setUserRef(uid){
-    $scope.userRef = ref.child("users").child(uid);
-    $scope.authenticated = true;
-    $scope.keywords = $firebaseArray($scope.userRef.child("keywords"));
-  }
+//  var authData = firebase.database().ref.getAuth();
+//  function setUserRef(uid){
+ //    $scope.userRef = ref.child("users").child(uid);
+ //    $scope.authenticated = true;
+ //    $scope.keywords = $firebaseArray($scope.userRef.child("keywords"));
+ //  }
+ // if (authData) {
+ //   console.log("Authenticated");
+ //    setUserRef(authData.uid);
+ //  }
+
   $scope.togglelogin =function()
   {
     if (firebase.auth().currentUser) {

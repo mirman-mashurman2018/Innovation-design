@@ -28,7 +28,7 @@ else {
 }
 };
 $scope.login = function(form) {
-  if (form.$valid) {
+
 
     firebase.auth().signInWithEmailAndPassword($scope.user.email, $scope.user.password).catch(function(error) {
            // Handle Errors here.
@@ -40,9 +40,9 @@ $scope.login = function(form) {
            } else {
              console.log(errorMessage);
            }
-  $location.path("/");
 });
-}
+console.log("logging in");
+$location.path("/");
 };
 $scope.createUser = function(user) {
   firebase.auth().createUserWithEmailAndPassword(user.email,user.password).catch(function(error) {
@@ -57,6 +57,24 @@ $scope.createUser = function(user) {
   }
   console.log(error);
   // [END_EXCLUDE]
+});
+firebase.auth().signInWithEmailAndPassword(user.email,user.password).catch(function(error) {
+       // Handle Errors here.
+       var errorCode = error.code;
+       var errorMessage = error.message;
+       // [START_EXCLUDE]
+       if (errorCode === 'auth/wrong-password') {
+         console.log('Wrong password.');
+       } else {
+         console.log(errorMessage);
+       }
+});
+console.log("creating");
+$location.path("/");
+firebase.database().ref('users/' + firebase.auth().currentUser.uid).set({
+  subjects: {
+    everything:{}
+  }
 });
 };
 
